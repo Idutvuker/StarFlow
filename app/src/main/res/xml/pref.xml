@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Location">
+
+        <ListPreference
+            android:key="city_pick"
+            android:summary="Chnage city"
+            android:title="City" />
+
+        <CheckBoxPreference
+            android:key="cust_location"
+            android:summary="Enable custom location"
+            android:title="Custom location" />
+
+        <Preference
+            android:dependency="cust_location"
+            android:key="pick_loc"
+            android:title="Change location" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Graphics">
+
+        <CheckBoxPreference
+            android:key="antialias"
+            android:title="Anti-aliasing"
+            android:summary="Use anti-aliasing filter"/>
+
+        <CheckBoxPreference
+            android:key="sphmode"
+            android:summary="Non-perspective projection"
+            android:title="Sphere projection" />
+
+    </PreferenceCategory>
+
+    <SwitchPreference
+        android:key="gyrosens"
+        android:title="Use gyroscope sensor"
+        android:summary="Experimental"/>
+
+</PreferenceScreen>

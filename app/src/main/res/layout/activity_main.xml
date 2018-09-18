@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.nick.starflow.activity.MainActivity">
+
+    <com.example.nick.starflow.mainview.MainView
+        android:id="@+id/mainView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <Button
+            android:id="@+id/activeStarBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:onClick="onButtonClick"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content">
+
+            <SearchView
+                android:focusableInTouchMode="true"
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:imeOptions="flagNoExtractUi" />
+
+            <ListView
+                android:background="@drawable/rounded_corner"
+                android:visibility="gone"
+                android:id="@+id/search_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/search"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/dateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:onClick="onButtonClick"
+            android:text="Button" />
+
+        <LinearLayout
+            android:id="@+id/datePickerLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/dateButton"
+
+            android:background="@drawable/rounded_corner"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <NumberPicker
+                    android:id="@+id/np_year"
+                    android:layout_width="50dp"
+                    android:layout_height="@dimen/np_height" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="."
+                    android:textSize="22sp" />
+
+                <NumberPicker
+                    android:id="@+id/np_month"
+                    android:layout_width="@dimen/np_width"
+                    android:layout_height="@dimen/np_height" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="."
+                    android:textSize="22sp" />
+
+                <NumberPicker
+                    android:id="@+id/np_day"
+                    android:layout_width="@dimen/np_width"
+                    android:layout_height="@dimen/np_height" />
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <NumberPicker
+                    android:id="@+id/np_hour"
+                    android:layout_width="@dimen/np_width"
+                    android:layout_height="@dimen/np_height" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textSize="22sp" />
+
+                <NumberPicker
+                    android:id="@+id/np_minute"
+                    android:layout_width="@dimen/np_width"
+                    android:layout_height="@dimen/np_height" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/curTimeButton"
+                android:layout_width="45dp"
+
+                android:layout_height="45dp"
+                android:onClick="onButtonClick"
+                android:padding="5dp"
+
+                android:scaleType="fitCenter"
+                android:src="@drawable/button_time" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/optionsButton"
+
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+
+            android:onClick="onButtonClick"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/gear"
+            android:background="#00000000"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
