@@ -1,6 +1,6 @@
 # Starflow
 
-Starflow is a realtime celestial map for Android with 
+Starflow is a realtime celestial map for Android
 
 ## Demo
 
