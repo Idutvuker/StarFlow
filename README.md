@@ -1,4 +1,4 @@
-# Starflow
+# StarFlow
 
 Starflow is a realtime celestial map for Android
 
